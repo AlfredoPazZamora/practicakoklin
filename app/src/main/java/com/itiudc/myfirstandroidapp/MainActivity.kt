@@ -17,22 +17,52 @@ class MainActivity : AppCompatActivity() {
         val buttonGetNumber = findViewById<Button>(R.id.button_getNumber)
         val inputAge        = findViewById<EditText>(R.id.input_age)
         val showNumber      = findViewById<TextView>(R.id.show_number)
-        val temp = 0
+        var temp = 0
+        var i = 0
+
 
         buttonGetNumber.setOnClickListener(){
             var numberAge:String = inputAge.text.toString()
+
 
             if (inputAge.text.isEmpty()){
                 Toast.makeText(this, "Please write something...", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            if (numberAge.toInt() > 9){
-                Toast.makeText(this, "Yes is $numberAge", Toast.LENGTH_SHORT).show()
+            if(numberAge.toInt() < 10){
+                numberAge = (numberAge.toInt() * 7).toString()
+
+                if(numberAge.toInt() > 9){
+                    temp = operation(numberAge.toInt())
+                    showNumber.text = temp.toString()
+                }else{
+                    showNumber.text = numberAge
+                }
             }else{
-                Toast.makeText(this, "No is $numberAge", Toast.LENGTH_SHORT).show()
+                temp = operation(numberAge.toInt())
+                showNumber.text = temp.toString()
             }
 
+            temp = 0
+
         }
+    }
+
+    fun operation(numberAge:Int): Int {
+        var age = numberAge
+        var temp = 0
+
+        while (age > 0){
+            temp += age % 10
+            age /= 10
+
+            if(temp > 9){
+                temp = operation(temp);
+            }
+        }
+
+
+        return temp
     }
 }
