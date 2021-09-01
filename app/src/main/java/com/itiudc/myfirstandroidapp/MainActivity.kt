@@ -16,16 +16,14 @@ class MainActivity : AppCompatActivity() {
 
         val buttonGetNumber = findViewById<Button>(R.id.button_getNumber)
         val inputAge        = findViewById<EditText>(R.id.input_age)
+        val inputName       = findViewById<EditText>(R.id.input_name)
         val showNumber      = findViewById<TextView>(R.id.show_number)
         var temp = 0
-        var i = 0
-
 
         buttonGetNumber.setOnClickListener(){
             var numberAge:String = inputAge.text.toString()
 
-
-            if (inputAge.text.isEmpty()){
+            if (inputAge.text.isEmpty() || inputName.text.isEmpty()){
                 Toast.makeText(this, "Please write something...", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -43,9 +41,7 @@ class MainActivity : AppCompatActivity() {
                 temp = operation(numberAge.toInt())
                 showNumber.text = temp.toString()
             }
-
             temp = 0
-
         }
     }
 
@@ -61,8 +57,6 @@ class MainActivity : AppCompatActivity() {
                 temp = operation(temp);
             }
         }
-
-
         return temp
     }
 }
