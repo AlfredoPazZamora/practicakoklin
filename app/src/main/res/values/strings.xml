@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name" translatable="false">Lucky number</string>
+
+    <!-- MainActivity -->
+    <string name="main_title">Find your lucky number</string>
+    <string name="main_input_placeholder_name">Enter your name</string>
+    <string name="main_input_placeholder_age">Enter your age</string>
+    <string name="main_button_getNumber">Let´s go</string>
+    <string name="main_subtitle">Your lucky number is ...</string>
+</resources>

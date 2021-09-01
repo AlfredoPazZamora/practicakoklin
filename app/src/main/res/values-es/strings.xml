@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MainActivity -->
+    <string name="main_title">Encuentra tu numero de la suerte</string>
+    <string name="main_input_placeholder_name">Ingresa tu nombre</string>
+    <string name="main_input_placeholder_age">Ingresa tu edad</string>
+    <string name="main_button_getNumber">Vamos</string>
+    <string name="main_subtitle">Tú numero de la suerte es...</string>
+</resources>
