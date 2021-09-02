@@ -6,5 +6,6 @@
     <string name="main_input_placeholder_name">Ingresa tu nombre</string>
     <string name="main_input_placeholder_age">Ingresa tu edad</string>
     <string name="main_button_getNumber">Vamos</string>
-    <string name="main_subtitle">Tú numero de la suerte es...</string>
+    <string name="main_subtitle">%1$s,tú numero de la suerte es…</string>
+
 </resources>
